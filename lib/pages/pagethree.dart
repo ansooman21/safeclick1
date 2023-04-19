@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:safeclick1/pages/login_signup_ui.dart';
+import 'package:safeclick1/login_and_signup/landing_page.dart';
 
 class pagethree extends StatelessWidget {
   const pagethree({super.key});
