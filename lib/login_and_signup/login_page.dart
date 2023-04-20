@@ -18,13 +18,13 @@ class login_page extends StatelessWidget {
               Text(
                 "USER LOGIN",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Image(
-                width: 250,
-                height: 250,
+                width: 200,
+                height: 144,
                 image: AssetImage("assets/image6.jpg"),
               ),
               custom_textfield(
@@ -51,6 +51,38 @@ class login_page extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
+                        child: Text(
+                          "Forgot Password ?",
+                          style: TextStyle(fontSize: 12),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "click here",
+                          style: TextStyle(
+                              color: Color.fromRGBO(242, 144, 167, 1)),
+                        ),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Register New User",
+                      style: TextStyle(color: Color.fromRGBO(242, 144, 167, 1)),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
