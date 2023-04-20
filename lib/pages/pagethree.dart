@@ -18,7 +18,7 @@ class pagethree extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Track locations of \nyour loved ones.",
+                  "Try our safeshake and \n safeclick",
                   // style: Color.fromRGBO(7, 11, 116, 1),
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class pagethree extends StatelessWidget {
               child: Image(
                 //fit: BoxFit.,
                 image: AssetImage(
-                  "assets/image2.jpg",
+                  "assets/image7.png",
                 ),
               ),
             ),

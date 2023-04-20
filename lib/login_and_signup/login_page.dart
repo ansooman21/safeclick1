@@ -18,21 +18,21 @@ class login_page extends StatelessWidget {
               Text(
                 "USER LOGIN",
                 style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(243, 102, 178, 1)),
               ),
               Image(
                 width: 200,
                 height: 144,
-                image: AssetImage("assets/image6.jpg"),
+                image: AssetImage("assets/safeclick_logo.png"),
               ),
               custom_textfield(
                 hintText: 'enter name',
                 prefix: Icon(Icons.person),
               ),
               custom_textfield(
-                hintText: 'enter name',
+                hintText: 'enter Password',
                 prefix: Icon(Icons.person),
               ),
               SizedBox(
