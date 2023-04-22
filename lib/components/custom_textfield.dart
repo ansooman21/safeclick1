@@ -7,7 +7,7 @@ class custom_textfield extends StatelessWidget {
   final String? hintText;
   final TextEditingController? controller;
   final String? Function(String?)? validate;
-  final String? Function(String?)? onsave;
+  final Function(String?)? onsave;
   final int? maxLines;
   final bool isPassword;
   final bool enabled;

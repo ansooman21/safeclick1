@@ -61,8 +61,7 @@ class startpage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => login_signup_ui()),
+                      MaterialPageRoute(builder: (context) => landing_page()),
                     );
                   },
                   child: Text(

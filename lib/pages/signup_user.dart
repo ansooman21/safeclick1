@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:safeclick1/components/custom_textfield.dart';
-import 'package:safeclick1/pages/signup_user.dart';
 
-class login_page extends StatefulWidget {
-  login_page({super.key});
+import '../components/custom_textfield.dart';
 
+class signup_user extends StatefulWidget {
   @override
-  State<login_page> createState() => _login_pageState();
+  State<signup_user> createState() => _signup_userState();
 }
 
-class _login_pageState extends State<login_page> {
+class _signup_userState extends State<signup_user> {
   bool isPasswordshown = true;
   final _formKey = GlobalKey<FormState>();
   final _formdata = Map<String, Object>();
@@ -29,24 +27,15 @@ class _login_pageState extends State<login_page> {
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(70, 20, 0, 0),
                   child: Text(
-                    "USER LOGIN",
+                    "USER SIGNUP",
                     style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: Color.fromRGBO(243, 102, 178, 1)),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
-                  child: Image(
-                    width: 200,
-                    height: 144,
-                    image: AssetImage("assets/safeclick_logo.png"),
                   ),
                 ),
                 Form(
@@ -114,8 +103,8 @@ class _login_pageState extends State<login_page> {
                         }
                       },
                       child: Text(
-                        "Login",
-                        style: TextStyle(fontSize: 20),
+                        "Register",
+                        style: TextStyle(fontSize: 18),
                       ),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(242, 144, 167, 1),
@@ -130,25 +119,6 @@ class _login_pageState extends State<login_page> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-                          child: Text(
-                            "Forgot Password ?",
-                            style: TextStyle(fontSize: 12),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "click here",
-                            style: TextStyle(
-                                color: Color.fromRGBO(242, 144, 167, 1)),
-                          ),
-                        ),
-                      ],
-                    ),
                     TextButton(
                       onPressed: () {
                         Navigator.push(
