@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safeclick1/pages/splash_screen.dart';
 import 'package:safeclick1/pages/startpage.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home: startpage(),
+      home: splash_screen(),
     );
   }
 }
