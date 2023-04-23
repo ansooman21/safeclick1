@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:safeclick1/login_and_signup/login_page.dart';
+import 'package:safeclick1/pages/homepage.dart';
 
 import '../components/custom_textfield.dart';
 
@@ -103,7 +104,7 @@ class _signup_userState extends State<signup_user> {
                         Padding(
                           padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                           child: custom_textfield(
-                            hintText: 'enter guardian name',
+                            hintText: 'enter guardian email',
                             textInputAction: TextInputAction.next,
                             keyboardtype: TextInputType.emailAddress,
                             prefix: Icon(Icons.person),
@@ -185,6 +186,12 @@ class _signup_userState extends State<signup_user> {
                           if (_formKey.currentState!.validate()) {
                             _onsubmit();
                           }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => homescreen(),
+                            ),
+                          );
                         },
                         child: Text(
                           "Register",
