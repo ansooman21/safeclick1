@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:safeclick1/components/custom_carousel.dart';
 import 'package:safeclick1/home_widgets/emergency.dart';
 
+import '../home_widgets/livelocations.dart';
+
 class homescreen extends StatefulWidget {
   const homescreen({super.key});
 
@@ -17,7 +19,7 @@ class _homescreenState extends State<homescreen> {
     return Scaffold(
       body: SafeArea(
           child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             // Padding(
@@ -45,6 +47,17 @@ class _homescreenState extends State<homescreen> {
                     ),
                   ),
                   emergency(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+                    child: Text(
+                      "Explore Livelocations",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  livelocations(),
                 ],
               ),
             )
