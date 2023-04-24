@@ -23,7 +23,7 @@ class emergency extends StatelessWidget {
           policeEmergency(),
           AmbulanceEmergency(),
           FireBrigadeEmergency(),
-          ArmyEmergency()
+          ArmyEmergency(),
         ],
       ),
     );
