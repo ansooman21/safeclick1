@@ -63,7 +63,7 @@ class ArmyEmergency extends StatelessWidget {
                               color: Colors.white),
                         ),
                         Text(
-                          "call 181 for emergencies",
+                          "call 191 for emergencies",
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                         Container(
