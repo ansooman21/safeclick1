@@ -20,7 +20,7 @@ class FireBrigadeEmergency extends StatelessWidget {
           ),
         ),
         child: InkWell(
-          onTap: () => _callNumber('102'),
+          onTap: () => _callNumber('101'),
           child: Container(
             height: 100,
             width: MediaQuery.of(context).size.width * 0.7,
@@ -63,7 +63,7 @@ class FireBrigadeEmergency extends StatelessWidget {
                               color: Colors.white),
                         ),
                         Text(
-                          "Call 1-0-2 for emergency",
+                          "Call 1-0-1 for emergency",
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                         Container(
@@ -74,7 +74,7 @@ class FireBrigadeEmergency extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30)),
                           child: Center(
                             child: Text(
-                              "1-0-2",
+                              "1-0-1",
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
