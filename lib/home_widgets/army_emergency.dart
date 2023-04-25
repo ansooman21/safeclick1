@@ -20,7 +20,7 @@ class ArmyEmergency extends StatelessWidget {
           ),
         ),
         child: InkWell(
-          onTap: () => _callNumber('1090'),
+          onTap: () => _callNumber('181'),
           child: Container(
             height: 100,
             width: MediaQuery.of(context).size.width * 0.7,
@@ -63,7 +63,7 @@ class ArmyEmergency extends StatelessWidget {
                               color: Colors.white),
                         ),
                         Text(
-                          "call 1090 for emergencies",
+                          "call 181 for emergencies",
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                         Container(
@@ -74,7 +74,7 @@ class ArmyEmergency extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30)),
                           child: Center(
                             child: Text(
-                              "1-0-9-0",
+                              "1-8-1",
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
