@@ -20,7 +20,7 @@ class policeEmergency extends StatelessWidget {
           ),
         ),
         child: InkWell(
-          onTap: () => _callNumber('100'),
+          onTap: () => _callNumber('101'),
           child: Container(
             height: 100,
             width: MediaQuery.of(context).size.width * 0.7,
