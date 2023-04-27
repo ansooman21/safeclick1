@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:safeclick1/home_widgets/policeEmergency.dart';
 
 import 'ambulance_emergency.dart';
-import 'army_emergency.dart';
+import 'women_emergency.dart';
 import 'fire_bridge_emergency.dart';
 
 class emergency extends StatelessWidget {
@@ -20,7 +20,7 @@ class emergency extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         children: [
-          ArmyEmergency(),
+          womenEmergency(),
           policeEmergency(),
           AmbulanceEmergency(),
           FireBrigadeEmergency(),

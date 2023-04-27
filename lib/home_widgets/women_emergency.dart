@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
-class ArmyEmergency extends StatelessWidget {
+class womenEmergency extends StatelessWidget {
   _callNumber(String number) async {
     await FlutterPhoneDirectCaller.callNumber(number);
   }
@@ -45,9 +45,15 @@ class ArmyEmergency extends StatelessWidget {
                   CircleAvatar(
                     radius: 25,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    child: Image.asset(
-                      "assets/www.jpg",
-                      height: 40,
+                    child: Container(
+                      width: 35.0,
+                      height: 35.0,
+                      //decoration: BoxDecoration(border: Border.all(width: 1),color: co),
+                      child: Image.asset(
+                        "assets/women_helpline.jpg",
+
+                        // height: 40,
+                      ),
                     ),
                   ),
                   Expanded(
