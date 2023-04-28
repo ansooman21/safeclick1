@@ -1,6 +1,11 @@
+import 'package:background_sms/background_sms.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:geocoding/geocoding.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:safeclick1/components/custom_carousel.dart';
 import 'package:safeclick1/home_widgets/emergency.dart';
 import 'package:shake/shake.dart';
@@ -18,10 +23,91 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
+  Position? _curentPosition;
+  String? _curentAddress;
+  LocationPermission? permission;
+
+  _getPermission() async => await [Permission.sms].request();
+  _isPermissionGranted() async => await Permission.sms.status.isGranted;
+  _sendSms(String phoneNumber, String message, {int? simSlot}) async {
+    SmsStatus result = await BackgroundSms.sendMessage(
+        phoneNumber: phoneNumber, message: message, simSlot: 1);
+    if (result == SmsStatus.sent) {
+      print("Sent");
+      Fluttertoast.showToast(msg: "send");
+    } else {
+      Fluttertoast.showToast(msg: "failed");
+    }
+  }
+
+  Future<bool> _handleLocationPermission() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text(
+              'Location services are disabled. Please enable the services')));
+      return false;
+    }
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Location permissions are denied')));
+        return false;
+      }
+    }
+    if (permission == LocationPermission.deniedForever) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text(
+              'Location permissions are permanently denied, we cannot request permissions.')));
+      return false;
+    }
+    return true;
+  }
+
+  _getCurrentLocation() async {
+    final hasPermission = await _handleLocationPermission();
+    if (!hasPermission) return;
+    await Geolocator.getCurrentPosition(
+            desiredAccuracy: LocationAccuracy.high,
+            forceAndroidLocationManager: true)
+        .then((Position position) {
+      setState(() {
+        _curentPosition = position;
+        print(_curentPosition!.latitude);
+        _getAddressFromLatLon();
+      });
+    }).catchError((e) {
+      Fluttertoast.showToast(msg: e.toString());
+    });
+  }
+
+  _getAddressFromLatLon() async {
+    try {
+      List<Placemark> placemarks = await placemarkFromCoordinates(
+          _curentPosition!.latitude, _curentPosition!.longitude);
+
+      Placemark place = placemarks[0];
+      setState(() {
+        _curentAddress =
+            "${place.locality},${place.postalCode},${place.street},";
+      });
+    } catch (e) {
+      Fluttertoast.showToast(msg: e.toString());
+    }
+  }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    _getPermission();
+    _getCurrentLocation();
+
     ////Shake Feature//////
     ShakeDetector.autoStart(
       onPhoneShake: () {
