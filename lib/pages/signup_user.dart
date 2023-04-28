@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:safeclick1/login_and_signup/login_page.dart';
+import 'package:safeclick1/pages/bottom_screen/bottom_page.dart';
 import 'package:safeclick1/pages/homepage.dart';
 
 import '../components/custom_textfield.dart';
+import 'bottom_screen/home_page.dart';
 
 class signup_user extends StatefulWidget {
   @override
@@ -189,7 +191,7 @@ class _signup_userState extends State<signup_user> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => homescreen(),
+                              builder: (context) => bottom_page(),
                             ),
                           );
                         },

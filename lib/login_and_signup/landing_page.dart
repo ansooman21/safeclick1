@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:safeclick1/login_and_signup/login_page.dart';
-import 'package:safeclick1/login_and_signup/police_login.dart';
+import 'package:safeclick1/police_interface/police_login.dart';
 
 class landing_page extends StatelessWidget {
   const landing_page({super.key});

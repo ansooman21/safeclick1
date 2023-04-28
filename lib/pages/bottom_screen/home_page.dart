@@ -15,14 +15,14 @@ import '../../home_widgets/livelocations.dart';
 import '../home_widgets/SafeHome/safehome.dart';
 import '../home_widgets/livelocations.dart';
 
-class homescreen extends StatefulWidget {
-  const homescreen({super.key});
+class home_screen extends StatefulWidget {
+  const home_screen({super.key});
 
   @override
-  State<homescreen> createState() => _homescreenState();
+  State<home_screen> createState() => _homescreenState();
 }
 
-class _homescreenState extends State<homescreen> {
+class _homescreenState extends State<home_screen> {
   Position? _curentPosition;
   String? _curentAddress;
   LocationPermission? permission;

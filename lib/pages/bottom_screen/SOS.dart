@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -11,6 +12,11 @@ class SOS_trigger extends StatefulWidget {
 class _SOS_triggerState extends State<SOS_trigger> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text("SOS Page"),
+      ),
+    );
+    ;
   }
 }

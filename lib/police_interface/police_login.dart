@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:safeclick1/components/custom_textfield.dart';
 import 'package:safeclick1/pages/signup_user.dart';
+import 'package:safeclick1/police_interface/police_signup.dart';
 
 class police_login extends StatefulWidget {
   police_login({super.key});
@@ -154,7 +155,7 @@ class _police_loginState extends State<police_login> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => signup_user(),
+                            builder: (context) => Signup_police(),
                           ),
                         );
                       },

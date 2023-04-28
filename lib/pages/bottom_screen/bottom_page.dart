@@ -16,7 +16,7 @@ class bottom_page extends StatefulWidget {
 class _bottom_pageState extends State<bottom_page> {
   int current_index = 0;
   List<Widget> pages = [
-    homescreen(),
+    home_screen(),
     contacts_page(),
     SOS_trigger(),
     Chat_page(),
