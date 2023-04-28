@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safeclick1/pages/bottom_screen/bottom_page.dart';
 import 'package:safeclick1/pages/splash_screen.dart';
 import 'package:safeclick1/pages/startpage.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home: startpage(),
+      home: bottom_page(),
     );
   }
 }
