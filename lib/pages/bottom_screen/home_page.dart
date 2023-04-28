@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:safeclick1/components/custom_carousel.dart';
 import 'package:safeclick1/home_widgets/emergency.dart';
+import 'package:shake/shake.dart';
 
 import '../../home_widgets/SafeHome/safehome.dart';
 import '../../home_widgets/livelocations.dart';
@@ -17,6 +18,27 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    ////Shake Feature//////
+    ShakeDetector.autoStart(
+      onPhoneShake: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Shake!'),
+          ),
+        );
+        // Do stuff on phone shake
+      },
+      minimumShakeCount: 1,
+      shakeSlopTimeMS: 500,
+      shakeCountResetTime: 3000,
+      shakeThresholdGravity: 2.7,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

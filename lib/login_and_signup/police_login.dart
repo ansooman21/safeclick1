@@ -152,10 +152,11 @@ class _police_loginState extends State<police_login> {
                     TextButton(
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => signup_user(),
-                            ));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => signup_user(),
+                          ),
+                        );
                       },
                       child: Text(
                         "Register New POLICE",

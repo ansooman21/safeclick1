@@ -45,16 +45,10 @@ class womenEmergency extends StatelessWidget {
                   CircleAvatar(
                     radius: 25,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    child: Container(
-                      width: 35.0,
-                      height: 35.0,
-                      decoration: BoxDecoration(
-                          border: Border.all(width: 1), color: Colors.amber),
-                      child: Image.asset(
-                        "assets/women_helpline.jpg",
+                    child: Image.asset(
+                      "assets/women_helpline_logo.png",
 
-                        // height: 40,
-                      ),
+                      // height: 40,
                     ),
                   ),
                   Expanded(
