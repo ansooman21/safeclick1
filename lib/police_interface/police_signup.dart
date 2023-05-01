@@ -35,7 +35,7 @@ class Signup_policeState extends State<Signup_police> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 20, 0, 0),
                     child: Text(
-                      "USER SIGNUP",
+                      "POLICE SIGNUP",
                       style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,

@@ -58,7 +58,7 @@ class FireBrigadeEmergency extends StatelessWidget {
                         Text(
                           "FireBrigade Emergency",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 21,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
