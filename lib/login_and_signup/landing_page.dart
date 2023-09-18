@@ -23,7 +23,7 @@ class landing_page extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    width: 200,
+                    width: 201,
                     height: 50,
                     child: ElevatedButton(
                       onPressed: () {
